@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ms-pedidos
-          image: tu-usuario-dockerhub/ms-pedidos:latest
+          image: luisrivas3/ms-pedidos:latest
           ports:
             - containerPort: 8082
           env:

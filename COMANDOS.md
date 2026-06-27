@@ -37,19 +37,19 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=9002 --ms.product
 ```bash
 # Construir imagen ms-productos
 cd ms-productos
-docker build -t tu-usuario/ms-productos:latest .
+docker build -t luisrivas3/ms-productos:latest .
 
 # Construir imagen ms-pedidos
 cd ms-pedidos
-docker build -t tu-usuario/ms-pedidos:latest .
+docker build -t luisrivas3/ms-pedidos:latest .
 ```
 
 ## 4. Publicar en Docker Hub
 
 ```bash
 docker login
-docker push tu-usuario/ms-productos:latest
-docker push tu-usuario/ms-pedidos:latest
+docker push luisrivas3/ms-productos:latest
+docker push luisrivas3/ms-pedidos:latest
 ```
 
 ## 5. Kubernetes con Minikube

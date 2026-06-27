@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ms-productos
-          image: tu-usuario-dockerhub/ms-productos:latest
+          image: luisrivas3/ms-productos:latest
           ports:
             - containerPort: 8081
           env:
