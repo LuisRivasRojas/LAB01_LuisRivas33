@@ -1,0 +1,5 @@
+com\lab\productos\repository\ProductoRepository.class
+com\lab\productos\controller\ProductoController.class
+com\lab\productos\MsProductosApplication.class
+com\lab\productos\entity\Producto.class
+com\lab\productos\service\ProductoService.class

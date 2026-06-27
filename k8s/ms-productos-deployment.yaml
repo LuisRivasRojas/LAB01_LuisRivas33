@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-productos
+  labels:
+    app: ms-productos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-productos
+  template:
+    metadata:
+      labels:
+        app: ms-productos
+    spec:
+      containers:
+        - name: ms-productos
+          image: tu-usuario-dockerhub/ms-productos:latest
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SERVER_PORT
+              value: "8081"
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://ep-morning-lake-athxmxxi-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "neondb_owner"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "npg_VtUFN9kj2LbE"

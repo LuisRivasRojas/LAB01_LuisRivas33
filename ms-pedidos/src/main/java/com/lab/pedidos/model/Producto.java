@@ -6,10 +6,6 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-/**
- * Modelo que representa la respuesta del ms-productos.
- * No es una entidad, solo un DTO para deserializar la respuesta REST.
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

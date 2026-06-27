@@ -1,0 +1,6 @@
+com\lab\pedidos\MsPedidosApplication.class
+com\lab\pedidos\service\PedidoService.class
+com\lab\pedidos\repository\PedidoRepository.class
+com\lab\pedidos\controller\PedidoController.class
+com\lab\pedidos\entity\Pedido.class
+com\lab\pedidos\model\Producto.class

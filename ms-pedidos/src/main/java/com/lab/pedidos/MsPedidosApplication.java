@@ -3,7 +3,7 @@ package com.lab.pedidos;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
 public class MsPedidosApplication {
@@ -12,9 +12,9 @@ public class MsPedidosApplication {
         SpringApplication.run(MsPedidosApplication.class, args);
     }
 
-    // RestTemplate para llamar al ms-productos
+    // WebClient para comunicación con ms-productos
     @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
+    public WebClient.Builder webClientBuilder() {
+        return WebClient.builder();
     }
 }

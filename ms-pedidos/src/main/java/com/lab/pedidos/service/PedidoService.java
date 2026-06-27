@@ -6,7 +6,7 @@ import com.lab.pedidos.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -19,7 +19,7 @@ public class PedidoService {
     private PedidoRepository pedidoRepository;
 
     @Autowired
-    private RestTemplate restTemplate;
+    private WebClient.Builder webClientBuilder;
 
     // URL del ms-productos (configurable desde application.properties)
     @Value("${ms.productos.url}")
@@ -35,11 +35,15 @@ public class PedidoService {
         return pedidoRepository.findById(id);
     }
 
-    // Crear pedido: consulta el producto, calcula total y reduce stock
+    // Crear pedido: consulta el producto via WebClient, calcula total y reduce stock
     public Pedido crearPedido(Long productId, Integer quantity) {
-        // 1. Consultar producto en ms-productos
-        String urlProducto = msProductosUrl + "/" + productId;
-        Producto producto = restTemplate.getForObject(urlProducto, Producto.class);
+        // 1. Consultar producto en ms-productos usando WebClient
+        Producto producto = webClientBuilder.build()
+                .get()
+                .uri(msProductosUrl + "/" + productId)
+                .retrieve()
+                .bodyToMono(Producto.class)
+                .block(); // bloqueo síncrono (app no reactiva)
 
         if (producto == null || !Boolean.TRUE.equals(producto.getActive())) {
             throw new RuntimeException("Producto no encontrado o inactivo: " + productId);
@@ -52,9 +56,13 @@ public class PedidoService {
         // 2. Calcular total
         BigDecimal total = producto.getPrice().multiply(BigDecimal.valueOf(quantity));
 
-        // 3. Reducir stock en ms-productos
-        String urlStock = msProductosUrl + "/" + productId + "/stock?cantidad=" + quantity;
-        restTemplate.put(urlStock, null);
+        // 3. Reducir stock en ms-productos via WebClient
+        webClientBuilder.build()
+                .put()
+                .uri(msProductosUrl + "/" + productId + "/stock?cantidad=" + quantity)
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
 
         // 4. Guardar pedido
         Pedido pedido = new Pedido();

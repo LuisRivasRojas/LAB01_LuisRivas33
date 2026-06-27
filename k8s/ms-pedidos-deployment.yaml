@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-pedidos
+  labels:
+    app: ms-pedidos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-pedidos
+  template:
+    metadata:
+      labels:
+        app: ms-pedidos
+    spec:
+      containers:
+        - name: ms-pedidos
+          image: tu-usuario-dockerhub/ms-pedidos:latest
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SERVER_PORT
+              value: "8082"
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://ep-morning-lake-athxmxxi-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "neondb_owner"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "npg_VtUFN9kj2LbE"
+            # ms-pedidos se comunica con ms-productos via nombre del Service de K8s
+            - name: MS_PRODUCTOS_URL
+              value: "http://ms-productos-service:8081/api/productos"
