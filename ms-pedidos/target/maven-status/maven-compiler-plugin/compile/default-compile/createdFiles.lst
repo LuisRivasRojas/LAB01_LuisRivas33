@@ -1,6 +1,12 @@
+com\lab\pedidos\infrastructure\adapter\out\persistence\PedidoJpaRepository.class
+com\lab\pedidos\infrastructure\adapter\out\client\ProductoWebClientAdapter.class
 com\lab\pedidos\MsPedidosApplication.class
-com\lab\pedidos\service\PedidoService.class
-com\lab\pedidos\repository\PedidoRepository.class
-com\lab\pedidos\controller\PedidoController.class
-com\lab\pedidos\entity\Pedido.class
-com\lab\pedidos\model\Producto.class
+com\lab\pedidos\infrastructure\adapter\out\persistence\PedidoPersistenceAdapter.class
+com\lab\pedidos\infrastructure\adapter\in\rest\PedidoController.class
+com\lab\pedidos\domain\port\in\PedidoServicePort.class
+com\lab\pedidos\domain\model\Pedido.class
+com\lab\pedidos\domain\model\ProductoResponse.class
+com\lab\pedidos\domain\port\out\ProductoClientPort.class
+com\lab\pedidos\infrastructure\adapter\out\persistence\PedidoEntity.class
+com\lab\pedidos\domain\port\out\PedidoRepositoryPort.class
+com\lab\pedidos\application\usecase\PedidoUseCase.class

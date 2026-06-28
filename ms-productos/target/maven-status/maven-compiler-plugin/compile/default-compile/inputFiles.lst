@@ -1,5 +1,9 @@
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\application\usecase\ProductoUseCase.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\infrastructure\adapter\in\rest\ProductoController.java
 C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\MsProductosApplication.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\repository\ProductoRepository.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\controller\ProductoController.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\service\ProductoService.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\entity\Producto.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\infrastructure\adapter\out\persistence\ProductoPersistenceAdapter.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\infrastructure\adapter\out\persistence\ProductoEntity.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\domain\port\out\ProductoRepositoryPort.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\domain\port\in\ProductoServicePort.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\domain\model\Producto.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-productos\src\main\java\com\lab\productos\infrastructure\adapter\out\persistence\ProductoJpaRepository.java

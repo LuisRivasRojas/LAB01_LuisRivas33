@@ -1,6 +1,12 @@
-C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\entity\Pedido.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\controller\PedidoController.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\infrastructure\adapter\out\persistence\PedidoEntity.java
 C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\MsPedidosApplication.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\repository\PedidoRepository.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\model\Producto.java
-C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\service\PedidoService.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\domain\port\in\PedidoServicePort.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\infrastructure\adapter\out\persistence\PedidoJpaRepository.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\domain\port\out\PedidoRepositoryPort.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\infrastructure\adapter\out\persistence\PedidoPersistenceAdapter.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\infrastructure\adapter\in\rest\PedidoController.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\domain\port\out\ProductoClientPort.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\infrastructure\adapter\out\client\ProductoWebClientAdapter.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\domain\model\Pedido.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\domain\model\ProductoResponse.java
+C:\Users\lriva\LAB01_LuisRivas33\ms-pedidos\src\main\java\com\lab\pedidos\application\usecase\PedidoUseCase.java

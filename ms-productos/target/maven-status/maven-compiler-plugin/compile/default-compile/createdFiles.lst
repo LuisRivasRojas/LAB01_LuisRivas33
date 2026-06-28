@@ -1,5 +1,9 @@
-com\lab\productos\repository\ProductoRepository.class
-com\lab\productos\controller\ProductoController.class
+com\lab\productos\domain\model\Producto.class
+com\lab\productos\infrastructure\adapter\in\rest\ProductoController.class
+com\lab\productos\domain\port\in\ProductoServicePort.class
+com\lab\productos\infrastructure\adapter\out\persistence\ProductoPersistenceAdapter.class
+com\lab\productos\infrastructure\adapter\out\persistence\ProductoJpaRepository.class
 com\lab\productos\MsProductosApplication.class
-com\lab\productos\entity\Producto.class
-com\lab\productos\service\ProductoService.class
+com\lab\productos\domain\port\out\ProductoRepositoryPort.class
+com\lab\productos\infrastructure\adapter\out\persistence\ProductoEntity.class
+com\lab\productos\application\usecase\ProductoUseCase.class
